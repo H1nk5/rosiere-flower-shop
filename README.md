@@ -1,272 +1,231 @@
-# 🌸 ROSIÈRE — 在线鲜花商城
+<div align="center">
 
-> Web开发基础课程期末大作业 — 一个具有完整前后端的现代法式轻奢风格鲜花电商首页
+# 🌸 ROSIÈRE
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap%205-7952B3?style=flat&logo=bootstrap&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+**A Modern Luxury Flower Shop — Full-Stack E-Commerce Platform**
 
----
+<br>
 
-## 📖 项目简介
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-本项目是一个在线鲜花商城的首页，采用**现代法式轻奢 / 极简高级感**的视觉风格，实现了八大核心功能模块，并配备了完整的 Node.js 后端 API 与 SQLite 数据库。
+<br>
 
-### 设计理念
+A full-stack flower e-commerce platform crafted with a **French luxury minimalist** aesthetic.<br>
+Front-end built on semantic HTML5 & Bootstrap 5 grid system. Back-end powered by Node.js, Express & SQLite.
 
-- **主色调**：低饱和度深优雅红 `#8B1E2F`（高定玫瑰红）
-- **辅助色**：香槟金 `#C5A46C`、柔和暖白 `#FAFAFA`
-- **设计语言**：精致微阴影、优雅圆角、细腻字间距、丝滑过渡动效
+[Getting Started](#-getting-started) · [Features](#-features) · [API Reference](#-api-reference) · [Architecture](#-architecture)
 
----
-
-## ✨ 功能特性
-
-### 前端八大模块
-
-| 模块 | 功能 | 技术要点 |
-|------|------|---------|
-| 🔗 快捷导航 | 登录/注册/购物车/客服热线 | Bootstrap Icons、响应式显隐 |
-| 🧭 导航栏 | 响应式导航 + 锚点平滑滚动 | `navbar-expand-md`、`scroll-behavior: smooth` |
-| 🎠 轮播图 | 双图自动轮播 + 手动控制 | Bootstrap Carousel、`data-bs-interval="2000"` |
-| 🏅 服务模块 | 5 项服务横排展示 | CSS Sprites 精灵图 |
-| 💐 鲜花推荐 | 8 张推荐卡片（大图+小图） | Bootstrap Grid、`object-fit` 差异化适配 |
-| 🎁 送长辈鲜花 | 10 个商品卡片 + 悬停放大 | `transform: scale(1.1)`、`transition: 0.45s` |
-| 💬 晒单评价 | 8 条用户评价卡片 | `-webkit-line-clamp` 多行文本截断 |
-| 📋 服务条款 | 4 列链接 + 16 个功能详情页 | 动态 Modal 内容注入 |
-
-### 交互功能
-
-- ✅ **登录 / 注册**：Bootstrap Modal 弹窗，对接后端 API
-- ✅ **用户状态管理**：localStorage 持久化，刷新不丢失
-- ✅ **购物车**：商品卡片 hover 浮现加入按钮，实时同步后端
-- ✅ **在线客服**：右下角浮窗，消息气泡 + 自动回复
-- ✅ **服务条款**：16 个详情页（购物流程/会员/退换货/配送等）
-- ✅ **响应式适配**：xs/sm/md/lg/xl/xxl 六档断点全覆盖
-
-### 后端 API
-
-- ✅ 用户注册 / 登录（bcrypt 密码加密）
-- ✅ 商品列表 / 详情 / 搜索 / 分类筛选
-- ✅ 购物车 CRUD（增删改查）
-- ✅ 评价列表 / 发表评价
-- ✅ 分类列表
+</div>
 
 ---
 
-## 🛠️ 技术栈
+## About
 
-### 前端
+ROSIÈRE is a premium online flower shop that blends **haute couture visual design** with **production-grade engineering**. The platform features a refined color palette of deep rose red (`#8B1E2F`), champagne gold (`#C5A46C`), and warm ivory (`#FAFAFA`), expressed through meticulous micro-shadows, fluid transitions, and a responsive six-breakpoint layout system.
 
-| 技术 | 版本 | 用途 |
-|------|------|------|
-| HTML5 | — | 语义化标签构建页面结构 |
-| CSS3 | — | 自定义变量、Flexbox、Grid、动画 |
-| Bootstrap 5 | 5.x | 响应式栅格、组件（Navbar/Carousel/Modal） |
-| Bootstrap Icons | 1.x | 矢量图标库 |
-| JavaScript (ES6+) | — | 原生 JS，无框架依赖 |
+### Design Philosophy
 
-### 后端
-
-| 技术 | 版本 | 用途 |
-|------|------|------|
-| Node.js | ≥18 | 运行时环境 |
-| Express | 4.x | Web 框架，RESTful API |
-| sql.js | 1.x | 纯 JS SQLite 实现，免编译 |
-| bcryptjs | 2.x | 密码哈希加密 |
-| cors | 2.x | 跨域资源共享 |
+| Element | Approach |
+|---------|----------|
+| Color | Low-saturation rose red primary, champagne gold accent, warm white surface |
+| Typography | System serif display + sans-serif body, `0.02em` letter-spacing |
+| Shadow | Three-tier warm-tinted shadows (`rgba(139,30,47,...)`) |
+| Motion | `cubic-bezier(0.25, 0.46, 0.45, 0.94)` easing across all interactions |
+| Layout | Bootstrap 5 12-column grid, `clamp()` fluid typography, CSS custom properties |
 
 ---
 
-## 🚀 快速开始
+## Features
 
-### 环境要求
+### Front-End Modules
+
+| Module | Description | Implementation |
+|--------|-------------|----------------|
+| **Fast Navigation** | Auth, cart, service hotline — desktop-only right panel | `d-none d-md-flex` conditional visibility |
+| **Navigation Bar** | Responsive collapse with smooth scroll anchors | `navbar-expand-md`, `scroll-behavior: smooth` |
+| **Hero Carousel** | Auto-advancing dual-slide banner, 2s interval | Bootstrap Carousel, `data-bs-pause="false"` |
+| **Service Bar** | Five trust signals in a single row | CSS Sprites (`common_sprite.png`) |
+| **Flower Gallery** | 8 recommendation cards (portrait + landscape) | `object-fit: cover/contain` with orientation modifiers |
+| **Product Grid** | 10 product cards with hover zoom | `transform: scale(1.1)`, `overflow: hidden` |
+| **Reviews** | 8 user testimonials with truncation | `-webkit-line-clamp`, flexbox card layout |
+| **Service Terms** | 4-column footer links, 16 content pages | Dynamic Bootstrap Modal injection |
+
+### Interactive Features
+
+- **Authentication** — Login / Register via Bootstrap Modals, bcrypt-hashed passwords, localStorage session persistence
+- **Shopping Cart** — Hover-reveal add-to-cart buttons, real-time sync with SQLite backend
+- **Live Chat** — Floating chat widget with slide-up animation, message bubbles, and simulated auto-replies
+- **Service Pages** — 16 rich-content modals (shipping, returns, membership, FAQ, social media)
+- **Accessibility** — `prefers-reduced-motion`, `prefers-color-scheme: dark`, `focus-visible` outlines, `@media print`
+
+---
+
+## Getting Started
+
+### Prerequisites
 
 - Node.js ≥ 18
 - npm ≥ 8
 
-### 安装与运行
+### Installation
 
 ```bash
-# 1. 克隆仓库
 git clone https://github.com/H1nk5/rosiere-flower-shop.git
 cd rosiere-flower-shop
-
-# 2. 安装依赖
 npm install
-
-# 3. 启动服务
 npm start
 ```
 
-浏览器访问 **http://localhost:3000** 即可。
+Open **http://localhost:3000** in your browser.
 
-### 其他命令
+### Commands
 
-```bash
-npm run seed     # 重新填充种子数据
-npm run reset    # 重置数据库（清空 + 重新 seed）
-npm run dev      # 开发模式（文件变更自动重启）
-```
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start production server |
+| `npm run dev` | Start with file-watch auto-restart |
+| `npm run seed` | Re-seed database with sample data |
+| `npm run reset` | Drop & recreate database from scratch |
 
-### 测试账号
+### Demo Accounts
 
-| 用户名 | 密码 | 昵称 | 积分 |
-|--------|------|------|------|
-| `test` | `123456` | 花间漫步 | 1280 |
-| `demo` | `123456` | 浪漫主义者 | 560 |
-| `admin` | `123456` | 系统管理员 | 9999 |
+| Username | Password | Role |
+|----------|----------|------|
+| `test` | `123456` | Regular user (1,280 pts) |
+| `demo` | `123456` | Regular user (560 pts) |
+| `admin` | `123456` | Admin (9,999 pts) |
 
 ---
 
-## 📁 项目结构
+## Architecture
 
 ```
 rosiere-flower-shop/
 │
-├── index.html                 # 主页面（八大模块 + 弹窗 + 客服浮窗）
+├── index.html                    # Single-page application entry
 │
 ├── css/
-│   ├── bootstrap.min.css      # Bootstrap 5 框架样式
-│   ├── index.css              # 主样式（变量/全局/组件/客服浮窗）
-│   └── media.css              # 媒体查询（六档断点 + 暗色/打印/无障碍）
+│   ├── bootstrap.min.css         # Bootstrap 5 framework
+│   ├── index.css                 # Design tokens, components, chat widget
+│   └── media.css                 # 6-breakpoint responsive + dark mode + print
 │
 ├── js/
-│   ├── bootstrap.min.js       # Bootstrap 5 JS（Carousel/Modal/Collapse）
-│   └── app.js                 # 前端交互（用户/购物车/评价/客服/页面内容）
+│   ├── bootstrap.min.js          # Bootstrap JS runtime
+│   └── app.js                    # SPA logic: auth, cart, chat, content pages
 │
-├── images/                    # 图片资源
-│   ├── slide01.jpg            # 轮播图 1
-│   ├── slide02.jpg            # 轮播图 2
-│   ├── lover.jpg              # 推荐卡片 - 恋人
-│   ├── elder.jpg              # 推荐卡片 - 长辈
-│   ├── friend.jpg             # 推荐卡片 - 朋友
-│   ├── birthday.jpg           # 推荐卡片 - 生日
-│   ├── elder1-10.jpg          # 长辈鲜花商品图 ×10
-│   ├── avatar.jpg             # 用户头像
-│   ├── logo.png               # 品牌 Logo
-│   ├── common_sprite.png      # CSS 精灵图（服务模块图标）
+├── images/                       # Product & UI assets
+│   ├── elder1-10.jpg             # Product catalog (10 items)
+│   ├── slide01/02.jpg            # Carousel slides
+│   ├── common_sprite.png         # CSS sprite sheet
 │   └── ...
 │
-├── bootstrap-icons/           # Bootstrap Icons 图标库
-│   └── font/
-│       ├── bootstrap-icons.min.css
-│       └── bootstrap-icons.woff2
+├── bootstrap-icons/              # Icon font (1800+ SVG icons)
 │
 ├── server/
-│   ├── server.js              # Express 服务入口
+│   ├── server.js                 # Express entry point
 │   ├── db/
-│   │   ├── init.js            # 数据库初始化（建表 + 查询工具）
-│   │   ├── seed.js            # 种子数据（18 商品 / 3 用户 / 8 评价）
-│   │   └── flower_shop.db     # SQLite 数据库文件（自动生成）
+│   │   ├── init.js               # Schema definition & query helpers
+│   │   ├── seed.js               # Sample data seeder
+│   │   └── flower_shop.db        # SQLite database (auto-generated)
 │   └── routes/
-│       ├── products.js        # 商品 API
-│       ├── users.js           # 用户 API
-│       ├── cart.js            # 购物车 API
-│       ├── reviews.js         # 评价 API
-│       └── categories.js      # 分类 API
+│       ├── products.js           # Product CRUD & search
+│       ├── users.js              # Auth (register / login)
+│       ├── cart.js               # Shopping cart operations
+│       ├── reviews.js            # Review submission & listing
+│       └── categories.js         # Category taxonomy
 │
-├── package.json               # 项目配置
-├── .gitignore                 # Git 忽略规则
-└── README.md                  # 项目说明文档
+├── package.json
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🔌 API 文档
+## API Reference
 
-### 商品接口
+### Products
 
-| 方法 | 路径 | 说明 | 参数 |
-|------|------|------|------|
-| `GET` | `/api/products` | 商品列表 | `?category=elder&keyword=玫瑰&page=1&limit=20` |
-| `GET` | `/api/products/:id` | 商品详情（含评价） | — |
-| `GET` | `/api/products/hot/list` | 热销 TOP 8 | — |
-| `GET` | `/api/categories` | 分类列表（含商品数） | — |
+```
+GET    /api/products              List products (?category=&keyword=&page=&limit=)
+GET    /api/products/:id          Product detail (includes reviews)
+GET    /api/products/hot/list     Top 8 bestsellers
+GET    /api/categories            Category list with product counts
+```
 
-### 用户接口
+### Authentication
 
-| 方法 | 路径 | 说明 | 参数 |
-|------|------|------|------|
-| `POST` | `/api/users/register` | 注册（送 100 积分） | `{ username, password, nickname?, phone? }` |
-| `POST` | `/api/users/login` | 登录 | `{ username, password }` |
-| `GET` | `/api/users/:id` | 用户信息 | — |
+```
+POST   /api/users/register        Register (+100 bonus points)
+POST   /api/users/login           Login (returns user object)
+GET    /api/users/:id             User profile
+```
 
-### 购物车接口
+### Shopping Cart
 
-| 方法 | 路径 | 说明 | 参数 |
-|------|------|------|------|
-| `GET` | `/api/cart` | 查询购物车 | `?user_id=1` |
-| `POST` | `/api/cart` | 加入购物车 | `{ user_id, product_id, quantity? }` |
-| `PUT` | `/api/cart/:id` | 更新数量 | `{ quantity }` |
-| `DELETE` | `/api/cart/:id` | 删除商品 | — |
+```
+GET    /api/cart?user_id=1        View cart
+POST   /api/cart                  Add item { user_id, product_id, quantity? }
+PUT    /api/cart/:id              Update quantity { quantity }
+DELETE /api/cart/:id              Remove item
+```
 
-### 评价接口
+### Reviews
 
-| 方法 | 路径 | 说明 | 参数 |
-|------|------|------|------|
-| `GET` | `/api/reviews` | 评价列表 | `?product_id=1&page=1&limit=8` |
-| `POST` | `/api/reviews` | 发表评价（送 10 积分） | `{ user_id, product_id, content, rating?, region? }` |
-
----
-
-## 📐 响应式断点
-
-| 断点 | 范围 | 设备 | 布局策略 |
-|------|------|------|---------|
-| xs | < 576px | 竖屏手机 | 单列、根字号 14px、服务模块 3+2 |
-| sm | 576 - 768px | 横屏手机 | 双列推荐卡片 |
-| md | 768 - 992px | 平板 | 三列商品、导航栏展开 |
-| lg | 992 - 1200px | 小桌面 | 四列推荐 |
-| xl | 1200 - 1400px | 标准桌面 | 五列商品 |
-| xxl | ≥ 1400px | 大桌面 | 加宽间距、放大标题 |
+```
+GET    /api/reviews               List reviews (?product_id=&page=&limit=)
+POST   /api/reviews               Submit review (+10 points) { user_id, product_id, content, rating?, region? }
+```
 
 ---
 
-## 🎨 设计细节
+## Responsive Breakpoints
 
-### CSS 变量体系
+| Token | Range | Target | Strategy |
+|-------|-------|--------|----------|
+| `xs` | < 576px | Portrait phone | Single column, `font-size: 14px`, 3+2 service layout |
+| `sm` | 576 – 768px | Landscape phone | 2-column grid |
+| `md` | 768 – 992px | Tablet | 3-column products, navbar expands |
+| `lg` | 992 – 1200px | Small desktop | 4-column gallery |
+| `xl` | 1200 – 1400px | Standard desktop | 5-column product grid |
+| `xxl` | ≥ 1400px | Large desktop | Wider spacing, larger headings |
+
+---
+
+## Design System
 
 ```css
 :root {
-  --clr-primary: #8B1E2F;       /* 高定玫瑰红 */
-  --clr-gold: #C5A46C;          /* 香槟金 */
-  --clr-warm-white: #FAFAFA;    /* 暖白 */
-  --shadow-sm: 0 2px 8px rgba(139, 30, 47, 0.06);  /* 暖色调微阴影 */
-  --transition-normal: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);  /* 丝滑缓动 */
+  --clr-primary: #8B1E2F;           /* Haute couture rose red */
+  --clr-gold: #C5A46C;              /* Champagne gold accent */
+  --clr-warm-white: #FAFAFA;        /* Warm ivory surface */
+  --shadow-sm: 0 2px 8px rgba(139, 30, 47, 0.06);
+  --shadow-md: 0 4px 20px rgba(139, 30, 47, 0.08);
+  --shadow-lg: 0 8px 32px rgba(139, 30, 47, 0.12);
+  --transition-normal: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 ```
 
-### 核心动效
+---
 
-- **导航项**：`::after` 伪元素渐变下划线，hover 居中展开
-- **商品卡片**：hover 上浮 6px + 阴影加深 + 图片放大 1.1 倍
-- **推荐卡片**：hover 遮罩层从灰色渐变为玫瑰红
-- **客服浮窗**：`slideUp` 入场动画 + 消息气泡渐变色
+## Changelog
+
+| Version | Date | Highlights |
+|---------|------|-----------|
+| **2.2** | 2026-06 | Live chat widget, 16 service content pages |
+| **2.1** | 2026-06 | Auth modals, shopping cart, session persistence |
+| **2.0** | 2026-06 | Node.js + Express backend, SQLite database, RESTful API |
+| **1.3** | 2026-06 | Full responsive refactor — 6 breakpoints, root font scaling |
+| **1.2** | 2026-06 | Image viewport fix — orientation-aware `object-fit` |
+| **1.1** | 2026-06 | French luxury design system — CSS variables, shadows, transitions |
+| **1.0** | 2026-06 | Semantic HTML5 scaffold + Bootstrap 5 grid layout |
 
 ---
 
-## 📸 页面截图
+## License
 
-> 启动服务后访问 http://localhost:3000 查看完整效果
-
----
-
-## 📝 开发日志
-
-- **v1.0** — 完成 HTML 语义化骨架 + Bootstrap 5 栅格布局
-- **v1.1** — 实现法式轻奢视觉设计（CSS 变量 + 阴影 + 过渡动效）
-- **v1.2** — 修复推荐卡片图片截断 Bug（object-fit 方向修饰类）
-- **v1.3** — 全面响应式重构（六档断点 + 根字号降级 + 文本截断）
-- **v2.0** — 新增 Node.js 后端 + SQLite 数据库 + RESTful API
-- **v2.1** — 新增登录注册弹窗 + 购物车 + 用户状态管理
-- **v2.2** — 新增在线客服浮窗 + 16 个服务条款功能页
-
----
-
-## 📄 License
-
-MIT License © 2026 ROSIÈRE
+MIT © [H1nk5](https://github.com/H1nk5)
