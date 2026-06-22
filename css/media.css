@@ -1,0 +1,512 @@
+/* ========================================================
+   ROSIÈRE — 媒体查询 · 全断点响应式适配
+   ========================================================
+   断点 (Bootstrap 5):
+     xs:  < 576px   (竖屏手机)
+     sm:  ≥ 576px   (横屏手机)
+     md:  ≥ 768px   (平板竖屏)
+     lg:  ≥ 992px   (平板横屏 / 小桌面)
+     xl:  ≥ 1200px  (标准桌面)
+     xxl: ≥ 1400px  (大桌面)
+   ======================================================== */
+
+
+/* =====================
+   超小设备 (< 576px)
+   ===================== */
+@media (max-width: 575.98px) {
+
+  /* 根字号等比缩小，全局元素跟着缩 */
+  html {
+    font-size: 14px;
+  }
+
+  /* ---------- 快捷导航 ---------- */
+  .fast-nav {
+    font-size: 0.72rem;
+  }
+
+  .fast-nav__left {
+    gap: 0.15rem 0.6rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .fast-nav__left a i {
+    font-size: 0.8rem;
+  }
+
+  /* 客服栏在超小设备隐藏 */
+  .fast-nav__right {
+    display: none !important;
+  }
+
+  /* ---------- 导航栏 ---------- */
+  .main-nav {
+    padding: 0.35rem 0;
+  }
+
+  .main-nav__logo {
+    height: 30px;
+  }
+
+  .main-nav .nav-link {
+    font-size: 0.88rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+  }
+
+  /* 折叠菜单项加底部分隔线 */
+  .navbar-collapse {
+    background: var(--clr-surface);
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--clr-border);
+    margin-top: 0.35rem;
+  }
+
+  .main-nav .nav-item + .nav-item {
+    border-top: 1px solid var(--clr-border);
+  }
+
+  /* ---------- 轮播图 ---------- */
+  .hero-carousel .carousel-item img {
+    min-height: 160px;
+    max-height: 220px;
+    object-fit: cover;
+  }
+
+  .hero-carousel .carousel-control-prev,
+  .hero-carousel .carousel-control-next {
+    width: 28px;
+    height: 28px;
+    opacity: 0.65;
+  }
+
+  .hero-carousel .carousel-control-prev {
+    left: 0.4rem;
+  }
+
+  .hero-carousel .carousel-control-next {
+    right: 0.4rem;
+  }
+
+  .hero-carousel .carousel-indicators {
+    bottom: 0.6rem;
+  }
+
+  .hero-carousel .carousel-indicators button {
+    width: 16px;
+    height: 2px;
+  }
+
+  .hero-carousel .carousel-indicators button.active {
+    width: 24px;
+  }
+
+  /* ---------- 服务模块 ---------- */
+  .service-bar {
+    padding: 0.6rem 0;
+  }
+
+  /* 5 项折成 3 + 2 两行 */
+  .service-bar .row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+
+  .service-bar .col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  /* 最后两项居中 */
+  .service-bar .col:nth-child(4),
+  .service-bar .col:nth-child(5) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .service-item {
+    font-size: 0.7rem;
+    gap: 0.3rem;
+  }
+
+  .service-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 20px auto;
+  }
+
+  .service-icon--enterprise  { background-position: 0 0; }
+  .service-icon--brand       { background-position: 0 -20px; }
+  .service-icon--delivery    { background-position: 0 -40px; }
+  .service-icon--promise     { background-position: 0 -60px; }
+  .service-icon--review      { background-position: 0 -80px; }
+
+  /* ---------- 区块标题 ---------- */
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ---------- 鲜花推荐 ---------- */
+  /* xs 下单列，图片不挤压 */
+  .recommend-card--lg {
+    aspect-ratio: 3 / 2;
+  }
+
+  /* 横图在小屏改为 cover 居中，避免留白过多 */
+  .recommend-card--lg.recommend-card--landscape .recommend-card__img {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .recommend-card--sm {
+    aspect-ratio: 1 / 1;
+  }
+
+  .recommend-card__overlay span {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* ---------- 送长辈商品 ---------- */
+  .product-card__body {
+    padding: 0.5rem 0.55rem;
+  }
+
+  .product-card__title {
+    font-size: 0.8rem;
+  }
+
+  .product-card__price {
+    font-size: 0.88rem;
+  }
+
+  .product-card__sold {
+    font-size: 0.68rem;
+  }
+
+  .product-card__tag {
+    font-size: 0.6rem;
+    padding: 0.12em 0.45em 0.12em 0.3em;
+  }
+
+  /* ---------- 晒单评价 ---------- */
+  .review-card {
+    padding: 0.8rem;
+  }
+
+  .review-card__avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .review-card__name {
+    font-size: 0.8rem;
+  }
+
+  .review-card__text {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .review-card__product-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* ---------- 服务条款 ---------- */
+  .terms__heading {
+    font-size: 0.82rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .terms__list a {
+    font-size: 0.75rem;
+  }
+
+  /* ---------- 页脚 ---------- */
+  .site-footer {
+    padding: 1.5rem 0 1.2rem;
+    text-align: center;
+  }
+
+  .site-footer__logo {
+    height: 26px;
+    margin: 0 auto 0.8rem;
+  }
+
+  .site-footer__copy {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .site-footer__icp {
+    font-size: 0.65rem;
+  }
+
+  /* ---------- 在线客服浮窗 ---------- */
+  #chatWidget {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  #chatToggle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  #chatWindow {
+    width: calc(100vw - 2rem);
+    right: -0.5rem;
+    height: 380px;
+  }
+}
+
+
+/* =====================
+   小设备 (≥ 576px, < 768px)
+   ===================== */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* ---------- 快捷导航 ---------- */
+  .fast-nav {
+    font-size: 0.78rem;
+  }
+
+  .fast-nav__left {
+    gap: 0.2rem 0.9rem;
+  }
+
+  /* ---------- 轮播图 ---------- */
+  .hero-carousel .carousel-item img {
+    min-height: 200px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  /* ---------- 服务模块 ---------- */
+  .service-bar .row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+
+  .service-bar .col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  .service-bar .col:nth-child(4),
+  .service-bar .col:nth-child(5) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .service-item {
+    font-size: 0.8rem;
+  }
+
+  /* ---------- 鲜花推荐 ---------- */
+  .recommend-card--lg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .recommend-card--sm {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* ---------- 送长辈商品 ---------- */
+  .product-card__title {
+    font-size: 0.85rem;
+  }
+
+  .product-card__price {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- 服务条款 ---------- */
+  .terms .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+
+/* =====================
+   中等设备 (≥ 768px, < 992px)
+   ===================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* ---------- 导航栏 ---------- */
+  .main-nav__logo {
+    height: 36px;
+  }
+
+  .main-nav .nav-link {
+    font-size: 0.86rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  /* ---------- 轮播图 ---------- */
+  .hero-carousel .carousel-item img {
+    min-height: 260px;
+    max-height: 380px;
+    object-fit: cover;
+  }
+
+  /* ---------- 鲜花推荐 ---------- */
+  .recommend-card--lg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .recommend-card--sm {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* ---------- 送长辈商品 ---------- */
+  .product-card__title {
+    font-size: 0.88rem;
+  }
+}
+
+
+/* =====================
+   大设备 (≥ 992px, < 1200px)
+   ===================== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* ---------- 导航栏 ---------- */
+  .main-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* ---------- 轮播图 ---------- */
+  .hero-carousel .carousel-item img {
+    min-height: 300px;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  /* ---------- 鲜花推荐 ---------- */
+  .recommend-card--lg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .recommend-card--sm {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+
+/* =====================
+   超大桌面 (≥ 1400px)
+   ===================== */
+@media (min-width: 1400px) {
+
+  /* ---------- 快捷导航 ---------- */
+  .fast-nav {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- 导航栏 ---------- */
+  .main-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  /* ---------- 轮播图 ---------- */
+  .hero-carousel .carousel-item img {
+    max-height: 520px;
+  }
+
+  /* ---------- 区块标题 ---------- */
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  /* ---------- 送长辈商品 ---------- */
+  .product-card__body {
+    padding: 0.9rem 1rem;
+  }
+
+  /* ---------- 晒单评价 ---------- */
+  .review-card {
+    padding: 1.4rem;
+  }
+}
+
+
+/* =====================
+   打印样式
+   ===================== */
+@media print {
+  .fast-nav,
+  .main-nav,
+  .hero-carousel,
+  .service-bar {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .product-card,
+  .review-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+
+/* =====================
+   减弱动效偏好
+   ===================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* =====================
+   暗色模式适配
+   ===================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-warm-white: #1A1614;
+    --clr-surface: #242019;
+    --clr-bg-section: #1E1B17;
+    --clr-text: #E8E2DC;
+    --clr-text-secondary: #A09890;
+    --clr-border: #3A352E;
+  }
+
+  .main-nav {
+    background: var(--clr-surface);
+  }
+
+  .fast-nav {
+    background: linear-gradient(135deg, #3D1520, var(--clr-primary-dark));
+  }
+
+  .site-footer {
+    background: linear-gradient(135deg, #111, #0A0A0A);
+  }
+}

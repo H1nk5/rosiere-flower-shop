@@ -1,0 +1,18 @@
+{
+  "name": "rosiere-flower-shop",
+  "version": "1.0.0",
+  "description": "ROSIÈRE 在线鲜花商城 — Node.js + Express + SQLite",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "seed": "node server/db/seed.js",
+    "reset": "rm -f server/db/flower_shop.db && node server/db/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "sql.js": "^1.10.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5"
+  }
+}
