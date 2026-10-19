@@ -132,7 +132,7 @@ rosiere-flower-shop/
 │   ├── common_sprite.png            # CSS 精灵图
 │   └── ...
 │
-├── bootstrap-icons/                 # Bootstrap Icons 图标字体
+├── bootstrap-icons/font/            # 运行所需的精简 Bootstrap Icons 字体
 │
 ├── server/
 │   ├── server.js                    # Express 服务入口
